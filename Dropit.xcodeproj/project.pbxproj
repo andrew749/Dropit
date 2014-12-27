@@ -14,6 +14,7 @@
 		B0CD589E1A4F29320060AF3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0CD589D1A4F29320060AF3A /* Images.xcassets */; };
 		B0CD58A11A4F29320060AF3A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0CD589F1A4F29320060AF3A /* LaunchScreen.xib */; };
 		B0CD58AD1A4F29320060AF3A /* DropitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CD58AC1A4F29320060AF3A /* DropitTests.m */; };
+		B0CD58B81A4F2E8C0060AF3A /* DropitBehavious.m in Sources */ = {isa = PBXBuildFile; fileRef = B0CD58B71A4F2E8C0060AF3A /* DropitBehavious.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		B0CD58A61A4F29320060AF3A /* DropitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DropitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CD58AB1A4F29320060AF3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0CD58AC1A4F29320060AF3A /* DropitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DropitTests.m; sourceTree = "<group>"; };
+		B0CD58B61A4F2E8C0060AF3A /* DropitBehavious.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropitBehavious.h; sourceTree = "<group>"; };
+		B0CD58B71A4F2E8C0060AF3A /* DropitBehavious.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropitBehavious.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,10 +84,10 @@
 		B0CD588F1A4F29320060AF3A /* Dropit */ = {
 			isa = PBXGroup;
 			children = (
-				B0CD58941A4F29320060AF3A /* AppDelegate.h */,
-				B0CD58951A4F29320060AF3A /* AppDelegate.m */,
 				B0CD58971A4F29320060AF3A /* ViewController.h */,
 				B0CD58981A4F29320060AF3A /* ViewController.m */,
+				B0CD58B61A4F2E8C0060AF3A /* DropitBehavious.h */,
+				B0CD58B71A4F2E8C0060AF3A /* DropitBehavious.m */,
 				B0CD589A1A4F29320060AF3A /* Main.storyboard */,
 				B0CD589D1A4F29320060AF3A /* Images.xcassets */,
 				B0CD589F1A4F29320060AF3A /* LaunchScreen.xib */,
@@ -96,6 +99,8 @@
 		B0CD58901A4F29320060AF3A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B0CD58941A4F29320060AF3A /* AppDelegate.h */,
+				B0CD58951A4F29320060AF3A /* AppDelegate.m */,
 				B0CD58911A4F29320060AF3A /* Info.plist */,
 				B0CD58921A4F29320060AF3A /* main.m */,
 			);
@@ -219,6 +224,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0CD58B81A4F2E8C0060AF3A /* DropitBehavious.m in Sources */,
 				B0CD58991A4F29320060AF3A /* ViewController.m in Sources */,
 				B0CD58961A4F29320060AF3A /* AppDelegate.m in Sources */,
 				B0CD58931A4F29320060AF3A /* main.m in Sources */,
