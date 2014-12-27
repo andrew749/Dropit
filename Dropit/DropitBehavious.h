@@ -8,7 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DropitBehavious : UIDynamicBehavior
+@interface DropitBehavious : UIDynamicBehavior <UIDynamicAnimatorDelegate>
+
 -(void )addItem:(id<UIDynamicItem>)item;
 -(void)removeItem:(id<UIDynamicItem>)item;
 @end

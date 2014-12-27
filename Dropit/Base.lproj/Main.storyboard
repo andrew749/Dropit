@@ -16,16 +16,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3V-MT-zC9">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p3V-MT-zC9" customClass="BezierPathView">
+                                <rect key="frame" x="0.0" y="28" width="320" height="452"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.50196081399917603" alpha="1" colorSpace="calibratedRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="0xI-I8-IBr" appends="YES" id="XHU-FK-qAu"/>
+                                    <outletCollection property="gestureRecognizers" destination="i4W-hc-yCz" appends="YES" id="zMP-iF-6pK"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="p3V-MT-zC9" secondAttribute="trailing" id="7n8-UG-3Tk"/>
+                            <constraint firstItem="p3V-MT-zC9" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Chs-sL-Sq7"/>
+                            <constraint firstAttribute="centerX" secondItem="p3V-MT-zC9" secondAttribute="centerX" id="LM2-A2-thh"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="p3V-MT-zC9" secondAttribute="bottom" constant="120" id="TO6-6T-jxX"/>
+                            <constraint firstItem="p3V-MT-zC9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZLr-MR-rjZ"/>
+                            <constraint firstItem="p3V-MT-zC9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="cZS-aT-3BU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="TO6-6T-jxX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
@@ -38,6 +52,11 @@
                         <action selector="tap:" destination="BYZ-38-t0r" id="50G-6P-dZp"/>
                     </connections>
                 </tapGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="i4W-hc-yCz">
+                    <connections>
+                        <action selector="pan:" destination="BYZ-38-t0r" id="3hf-nc-6iW"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="597" y="338"/>
         </scene>

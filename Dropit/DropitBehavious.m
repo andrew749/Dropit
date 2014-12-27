@@ -7,15 +7,17 @@
 //
 
 #import "DropitBehavious.h"
-@interface DropitBehavious() <UIDynamicAnimatorDelegate>
+@interface DropitBehavious()
 @property (strong,nonatomic)UIGravityBehavior *gravity;
 @property (strong,nonatomic)UICollisionBehavior *collider;
+@property (strong,nonatomic)UIDynamicItemBehavior *animationOptions;
 @end
 @implementation DropitBehavious
 -(instancetype)init{
     self=[super init];
     [self addChildBehavior:self.gravity];
     [self addChildBehavior:self.collider];
+    [self addChildBehavior:self.animationOptions];
     return self;
 }
 -(UICollisionBehavior *)collider{
@@ -26,7 +28,13 @@
     }
     return _collider;
 }
-
+-(UIDynamicItemBehavior *)animationOptions{
+    if(!_animationOptions){
+        _animationOptions=[[UIDynamicItemBehavior alloc] init];
+        _animationOptions.allowsRotation=NO;
+    }
+    return _animationOptions;
+}
 -(UIGravityBehavior *)gravity{
     if(!_gravity){
         _gravity=[[UIGravityBehavior alloc] init];
@@ -37,9 +45,11 @@
 -(void)addItem:(id<UIDynamicItem>)item  {
     [self.collider addItem:item];
     [self.gravity addItem:item];
+    [self.animationOptions addItem:item];
 }
 -(void)removeItem:(id<UIDynamicItem>)item{
     [self.collider removeItem:item];
     [self.gravity removeItem:item];
+    [self.animationOptions removeItem:item];
 }
 @end
